@@ -1,5 +1,5 @@
 ## Running JSON Server
-Go to 'json-server' path. Run `json-server --watch db.json` to start JSON Server. (https://www.npmjs.com/package/json-server)
+Clone https://github.com/milenebrazz/carteira-investimentos-api. Run `json-server --watch db.json` to start JSON Server. (https://www.npmjs.com/package/json-server)
 
 # CarteiraInvestimentos
 
