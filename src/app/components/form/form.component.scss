@@ -1,0 +1,19 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    .mat-form-field, .mat-form-field-infix {
+        margin-right: 16px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 426px) {
+    .form {
+        flex-direction: column;
+        align-items: initial;
+        .mat-form-field, .mat-form-field-infix {
+            margin: 0 0 32px 0;
+        }
+    }
+}

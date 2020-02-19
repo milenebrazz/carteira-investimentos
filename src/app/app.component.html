@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<main class="app">
+  <h1>Carteira de Investimentos</h1>
+  <app-form (submitInvestment)="postInvestment($event)"></app-form>
+  <app-result [fixa]="investmentsByFixa$" [variavel]="investmentsByVariavel$" (removeInvestment)="removeInvestment($event)"></app-result>
+  <app-chart [dataChart]="dataChart$" *ngIf="investmentsByFixa$?.length > 0 || investmentsByVariavel$?.length"></app-chart>
+  <app-footer></app-footer>
+</main>
+
+<router-outlet></router-outlet>

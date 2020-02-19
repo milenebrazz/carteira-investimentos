@@ -1,0 +1,25 @@
+.result {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    .columns {
+        width: 25%;
+        margin-left: 32px;
+        .mat-table {
+            width: 100%;
+            .mat-header-cell {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    .result {
+        flex-direction: column;
+        .columns {
+            width: 100%;
+            margin: 0 0 32px 0;
+        }
+    }
+}

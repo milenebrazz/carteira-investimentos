@@ -1,0 +1,34 @@
+<section>
+    <form [formGroup]="form" class="form">
+        <mat-form-field>
+            <mat-label class="mdc-text-field">Tipos</mat-label>
+            <select formControlName="type" matNativeControl required>
+                <option value="RENDA_FIXA">Renda Fixa</option>
+                <option value="RENDA_VARIAVEL">Renda Variável</option>
+            </select>
+            <mat-error *ngIf="type.hasError('required')">
+                Tipo é <strong>obrigatório</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Valor *" formControlName="value" autocomplete="off" currencyMask  [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" >
+            <mat-error *ngIf="value.hasError('required')">
+                Valor é <strong>obrigatório</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <!-- <input matInput placeholder="Data da compra *" formControlName="date" autocomplete="off"> -->
+            <mat-label>Data da compra</mat-label>
+            <input formControlName="date" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="date.hasError('required')">
+                Data é <strong>obrigatório</strong>
+            </mat-error>
+        </mat-form-field>
+        
+        <button (click)="submit()" color="primary" mat-raised-button>Adicionar</button>
+    </form>
+</section>
